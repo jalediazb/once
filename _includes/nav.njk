@@ -1,0 +1,67 @@
+<nav id="main-navbar" class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger ml-0" aria-label="menu" aria-expanded="false" data-target="mobile-navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      <a class="navbar-item" href="{{ config.url }}">
+        {% if config.logoUrl.length > 0 %}
+          {#
+            Si logo desde fichero: <img src="{{ config.logoUrl }}" alt="{{ config.title }}"/>
+            Si logo insertado como SVG: {% logoSVG %}
+          #}
+          <img src="{{ config.logoUrl }}" alt="{{ config.title }}"/>
+        {% else %}
+          {{ config.title }}
+        {% endif %}
+      </a>
+      <a id="share-mobile" href="#" class="navbar-item is-hidden-desktop ml-auto mr-2" aria-label="share button for mobile">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/></g></svg>
+        </span>
+      </a>
+      {% if config.search === true %}
+        <div class="navbar-item is-hidden-desktop mr-3">
+          <a role="button" aria-label="search" class="search-icon icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426zM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12z" fill="#414141" fill-rule="evenodd"/></svg>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+
+    <div id="mobile-navbar" class="navbar-menu">
+
+      {% if config.search === true or config.navbarButtons.length > 0 %}
+      <div class="navbar-end">
+
+        {% for item in config.navbarMenu %}
+            <a class="navbar-item" href="{{item.url}}">{{item.anchor}}</a>
+        {% endfor %}
+
+        {% if config.navbarButtons.length > 0 %}
+          <div class="navbar-item">
+            <div class="buttons">
+              {% for item in config.navbarButtons %}
+                <a class="button {{item.class}}" href="{{item.url}}">{{item.anchor}}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if config.search === true %}
+          <div class="navbar-item is-hidden-touch">
+            <a role="button" aria-label="search" class="search-icon icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426zM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12z" fill="#414141" fill-rule="evenodd"/></svg>
+            </a>
+          </div>
+        {% endif %}
+
+      </div>
+      {% endif %}
+
+
+    </div>
+  </div>
+</nav>

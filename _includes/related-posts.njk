@@ -1,0 +1,14 @@
+<aside class="section has-background-light">
+    <div class="container pb-3" style="max-width:960px">
+        <div class="columns is-multiline">
+            <div class="column is-full">
+                <p class="title is-4 has-text-centered mt-4 mb-4">{{ config.relatedPostsTitle }}</p>
+            </div>
+            {%- for item in collections.all|relacionados(tags, page.inputPath, 3) -%}
+                <div class="column is-full-mobile is-one-third-tablet">
+                    {% include "tarjeta.njk" %}
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,48 @@
+{
+  "title": "Once",
+  "url": "/",
+  "language": "es",
+  "logoUrl": "/_images/once.png",
+  "search": true,
+
+  "showCookiesAdvice": true,
+  "googleAnalyticsID": "",
+  "footerLinks": [
+    {
+      "anchor": "Aviso Legal",
+      "url": "/about/"
+    },
+    {
+      "anchor": "Política de Cookies",
+      "url": "/about/"
+    }
+  ],
+  "navbarMenu": [
+    {
+      "anchor": "About",
+      "url": "/about/"
+    },
+    {
+      "anchor": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "navbarButtons": [
+    {
+      "anchor": "Suscribe",
+      "class": "is-small is-danger",
+      "url": "about"
+    }
+  ],
+  "social": {
+    "facebook": "https://google.es",
+    "twitter": "http://google.es",
+    "pinterest": "http://google.es",
+    "instagram": "http://google.es",
+    "github": "http://google.es"
+  },
+  "showShareButtons": true,
+  "showDate": true,
+  "showRelatedPosts": true,
+  "relatedPostsTitle": "Related Posts"
+}

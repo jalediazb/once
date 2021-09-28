@@ -1,0 +1,29 @@
+---
+layout: index_layout.njk
+title: Once eleventy Theme - Demo
+description: This is a description of Once Eleventy Theme
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.all
+  size: 9
+---
+
+<section class="section is-flex-grow-1">
+  <div class="container">
+
+    <div class="columns is-variable is-5 is-multiline is-mobile">
+      {% for item in pagination.items | reverse %}
+        <div class="column is-one-third-tablet is-full-mobile mb-5">
+          {% include "tarjeta.njk" %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        {% include "pagination.njk" %}
+      </div>
+    </div>
+
+  </div>
+</section>

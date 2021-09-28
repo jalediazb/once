@@ -1,0 +1,67 @@
+---
+title: Título Artículo
+featuredImage: /_images/default.png
+---
+
+  {% include "head.njk" %}
+
+  <body class="is-flex is-flex-direction-column">
+
+    {% include "nav.njk" %}
+
+    <main class="section is-flex-grow-1">
+
+      <div class="container">
+        {% topPostAd %}
+      </div>
+
+      <article class="container articulo">
+        <header class=" container has-text-centered">
+          {% if config.showDate %}
+            <p class="mb-1"><time class="has-text-grey-dark is-size-7">Published: {{ page.date | postDate }}</time></p>
+          {% endif %}
+          <h1 class="title is-1 is-size-3-mobile has-text-weight-bold">{{ title}}</h1>
+          <p class="is-size-5 has-text-grey-dark has-text-weight-light is-family-sans-serif">{{ description }}</p>
+          <div class="tags is-justify-content-center mt-3">
+            {% for tag in tags %}
+              <a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>
+            {% endfor %}
+          </div>
+        </header>
+
+        {% if featuredImage %}
+          <figure class="image featured-image py-5">
+            <img src="{{featuredImage}}" alt="{{title}}" class="image is-fullwidth">
+          </figure>
+        {% endif %}
+
+        {% bottomImagePostAd %}
+
+        <div class="is-flex">
+
+          <div class="articulo-content content mb-0">
+
+            {{ content | safe }}
+
+          </div>
+
+          {% if config.showShareButtons%}
+            {% include "share-buttons.njk" %}
+          {% endif %}
+
+        </div>
+
+        {% bottomContentPostAd %}
+
+      </article>
+    </main>
+
+    {% if config.showRelatedPosts %}
+      {% include "related-posts.njk" %}
+    {% endif %}
+
+
+    {% include "footer.njk" %}
+  </body>
+
+</html>

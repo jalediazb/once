@@ -1,0 +1,25 @@
+---
+title: Etiqueta
+pagination:
+  data: testdata
+testdata:
+  - Item1
+  - Item2
+  - Item3
+  - Item4
+---
+
+{% include "head.njk" %}
+
+<body class="is-flex is-flex-direction-column">
+  {% include "nav.njk" %}
+
+  {% topIndexAd %}
+
+  {{ content | safe }}
+
+  {% include "footer.njk" %}
+</body>
+
+</html>
+

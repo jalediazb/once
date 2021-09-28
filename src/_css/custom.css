@@ -1,0 +1,87 @@
+/* General */
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Fonts */
+
+.tarjeta-title {
+  line-height: 1.3;
+  letter-spacing: -.7px;
+}
+
+/* Layout */
+
+.container.articulo {
+  max-width: 816px !important;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+}
+
+/* Navbar */
+@media (max-width: 1023px) {
+  body {
+    padding-top: 3.25rem;
+  }
+  #main-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Tarjetas */
+.tarjeta:hover {
+  transition: all 1s;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0px 0 1px rgb(10 10 10 / 2%);
+}
+
+/* Post and Article Content*/
+@media( min-width: 1024px) {
+  figure.featured-image {
+    margin: 0rem -3rem !important;
+  }
+}
+@media(max-width: 768px) {
+  figure.featured-image {
+    margin: 1rem -0.75rem !important;
+  }
+}
+
+/* Search */
+#search-results {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+/* Footer */
+.footer-social-icons span, .share-buttons a {
+  margin: 0 7px;
+}
+.footer-social-icons span:first-child, .share-buttons a:first-child {
+  margin-left: 0;
+}
+.footer-social-icons span:last-child, .share-buttons a:last-child {
+  margin-right: 0;
+}
+
+/* Share Buttons */
+.social-flotante ul {
+  margin-top: 7px;
+  position: sticky;
+  top: 20px;
+  overflow: hidden;
+}
+.social-flotante li a {
+  margin: 5px 0;
+}

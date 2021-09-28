@@ -1,0 +1,36 @@
+---
+eleventyComputed:
+  title: "Archivo: {{tag}}"
+layout: tag-pages-Layout.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+eleventyExcludeFromCollections: true
+---
+
+<section class="section is-flex-grow-1">
+  <div class="container">
+
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-full mb-3">
+        <div class="columns is-vcentered is-mobile">
+          <div class="column is-flex-grow-0 is-paddingless">
+            <span class="icon is-large" style="margin-bottom:-6px">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="22" height="22" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M448 320q0-53-37.5-90.5T320 192t-90.5 37.5T192 320t37.5 90.5T320 448t90.5-37.5T448 320zm1067 576q0 53-37 90l-491 492q-39 37-91 37q-53 0-90-37L91 762q-38-37-64.5-101T0 544V128q0-52 38-90t90-38h416q53 0 117 26.5T763 91l715 714q37 39 37 91z" fill="currentColor"/></svg>
+            </span>
+          </div>
+          <div class="column"><h1 class="title is-2 is-size-3-mobile">{{ tag }}</h1></div>
+        </div>
+      </div>
+      {% set taglist = collections[ tag ] %}
+      {% for item in taglist | reverse %}
+        <div class="column is-one-third-tablet is-full-mobile">
+          {% include "tarjeta.njk" %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

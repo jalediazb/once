@@ -9,12 +9,12 @@
   "googleAnalyticsID": "",
   "footerLinks": [
     {
-      "anchor": "Aviso Legal",
-      "url": "/about/"
+      "anchor": "Legal Advice",
+      "url": "#"
     },
     {
-      "anchor": "Política de Cookies",
-      "url": "/about/"
+      "anchor": "Cookies Advice",
+      "url": "#"
     }
   ],
   "navbarMenu": [
@@ -24,7 +24,7 @@
     },
     {
       "anchor": "Contact",
-      "url": "/contact/"
+      "url": "#"
     }
   ],
   "navbarButtons": [
@@ -35,11 +35,11 @@
     }
   ],
   "social": {
-    "facebook": "https://google.es",
-    "twitter": "http://google.es",
-    "pinterest": "http://google.es",
-    "instagram": "http://google.es",
-    "github": "http://google.es"
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "pinterest": "https://pinterest.com",
+    "instagram": "https://instagram.com",
+    "github": "https://github.com"
   },
   "showShareButtons": true,
   "showDate": true,

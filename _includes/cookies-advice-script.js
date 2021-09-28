@@ -24,6 +24,7 @@ function rechazaCookies () {
 
 function inyectar () {
     if (typeof analyticsID !== 'undefined') {
+        /*--- Edit or paste code below ---*/
         // Fichero Externo Analytics
         var jsAnalytics = document.createElement('script')
         jsAnalytics.src = 'https://www.googletagmanager.com/gtag/js?id='.concat(analyticsID)

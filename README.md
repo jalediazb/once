@@ -1,54 +1,44 @@
+# ONCE - Eleventy Theme
 
+Personal theme made with:
+- [Eleventy](https://www.11ty.dev/)
+- [BulmaCSS](https://bulma.io/)
+- [PurgeCSS](https://purgecss.com/)
 
-## scripts
+Features:
+
+- Layouts for:
+  - Pages (minimal-post.njk)
+  - Post (post.njk)
+  - Index
+  - Tag pages
+  - Error 404
+- Sitemap
+- Search by titles
+- Share Buttons
+- Links for social profiles.
+- Blocks for ads or another content
+- Cookies advice
+- Minify CSS, JS and HTML
+- Remove unused CSS
+
+## Scripts
+
 - Develop: `npm run serve`
 - Build: `npm run build`
 
-### Código que se muestra o ejecuta en Desarrollo o Producción
+## Config Theme
 
-```
-{% if estado.environment == "production" %}
-    Producción
-{% else %}
-    Desarrollo
-{% endif %}
-```
+There is a file `_data/config.json` where you can edit your configuration.
 
-## Información de la Plantilla
-
-### CSS y JS personalizado
-- Custom Css en `./_includes/custom.css`
-- Custom Js en `./_includes/scripts.js`
-
-### Featured Imagen para artículos y páginas
-- Existen una imagen genérica para post y páginas si no se especifica nada.
-- Se puede cambiar la imagen por defecto en la cabecera del md.
-- Si queremos que no se muestre imagen genérica se vacia el contenido de la etiqueta featuredImage
-
-### Menu y botones Navbar
-- Elementos del menu principal como elementos en config.json
-- Bonotes en navbar como elementos en config.json
-
-### Navbar logo
-Se puede utilizar tanto en SVG (modificando la nav.njk) o la url de una imagen cambiando config.json
+### Custom CSS y JS
+- `./src/_css/custom.css`
+- `./_includes/scripts.js`
 
 ### Error 404
 
-Para determinados hosting (No Github o Netlify) es necesario crear un fichero .htaccess
-
-`ErrorDocument 404 /404.html`
+There is a template for errors. [More information](https://www.11ty.dev/docs/quicktips/not-found/).
 
 ### Ad Blocks
 
-Edit in eleventy.js
-
-## ES Modules
-
-Para usar ES Modules buscar paquete en [https://www.skypack.dev/](https://www.skypack.dev/).
-
-## Next
-
-- paginate tag pages
-
-
-
+Edit in `eleventy.js`

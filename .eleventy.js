@@ -4,64 +4,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("htaccess");
 
-
-    // Categorias
-    // eleventyConfig.addCollection('categories', collection => {
-    //     return collection.getAll().filter(post => post.data.hasOwnProperty('category') === true)
-    // })
-
-    // Taglist
-    // eleventyConfig.addCollection("tagsList", function(collectionApi) {
-    //     const tagsList = new Set();
-    //     collectionApi.getAll().map( item => {
-    //         if (item.data.tags) { // handle pages that don't have tags
-    //             item.data.tags.map( tag => tagsList.add(tag))
-    //         }
-    //     });
-    //     return tagsList;
-    // });
-
-    // eleventyConfig.addCollection("categoriesList", function(collectionApi) {
-    //     const categoriesList = new Set();
-    //     collectionApi.getAll().map( item => {
-    //         // if (item.data.category) {
-    //         //     item.data.category.map( categoria => categoryList.add(categoria))
-    //         // }
-    //         categoriesList.add(item.data.category)
-    //     })
-    //     return categoriesList;
-    // });
-
-    // // Articulos con Categoría
-    // eleventyConfig.addCollection('articulos', collection => {
-    //     return collection.getAll().filter(post => post.data.category !== null );
-    // })
-
-    // eleventyConfig.addCollection('articlesByTag', collection => {
-
-    //     let articulos = collection.getAll()
-    //     let allTags = []
-    //     articulos.map((item) => {
-    //         allTags.push(...item.data.tags)
-    //     })
-    //     const tags = new Set()
-    //     allTags.forEach((item) => tags.add(item))
-
-    //     let articlesByTags = {}
-
-    //     for (let tag of tags) {
-    //         articlesByTags[tag] = []
-    //         articulos.forEach( (item) => {
-    //             if (item.data.tags.includes(tag)) {
-    //                 articlesByTags[tag].push(item)
-    //             }
-    //         })
-    //     }
-
-    //     // console.log(articlesByTags)
-    //     return articlesByTags
-    // })
-
     /* --- ADS --- */
     eleventyConfig.addNunjucksShortcode("topIndexAd", function() {
         return ``
@@ -87,11 +29,6 @@ module.exports = function (eleventyConfig) {
         return ``
     })
     /* --- ./ADS --- */
-
-
-    eleventyConfig.addShortcode("logoSVG", function() {
-        return `<svg version="1" xmlns="http://www.w3.org/2000/svg" width="853.333" height="213.333" viewBox="0 0 640 160"><path d="M576.3 21.9l-4.2 1.9-4 12.9c-13.3 42.6-28.1 91.8-28.1 93.5 0 3.3 1.8 5.5 6 7.2 8.7 3.5 12.9 1.4 15.3-7.4.9-3 2.3-8.1 3.2-11.3l1.6-5.7h36.8l1.5 5.3c.8 2.8 2.2 7.9 3.1 11.2.9 3.3 2.6 6.8 3.7 7.7 5 4.4 17.8-.5 17.8-6.7 0-2.1-13.4-46.7-28.1-93.8l-4-12.8-4.2-2c-5.3-2.4-11.1-2.4-16.4 0zm15.1 49.8C595 84.5 598 95.4 598 96c0 .6-4.9 1-13.5 1-10 0-13.5-.3-13.5-1.2 0-1.5 13.2-47.9 13.5-47.6.2.2 3.2 10.8 6.9 23.5zM175 21.7c-.8.3-2.3 1.2-3.2 2.1-1.7 1.4-1.8 5.4-1.8 56.3v54.8l2.7 2.1c2.6 2.1 3.5 2.1 26.8 1.8 22.7-.3 24.3-.4 29.2-2.7 6.8-3 12.5-9.3 14.9-16.2 2.3-6.7 2.6-24.5.5-30.3-1.7-4.8-7.1-10.9-11.1-12.6-1.7-.7-3-1.5-3-1.9 0-.3 1.6-1.6 3.6-2.9 5.7-3.7 8.8-11.6 8.9-22.2 0-4.7-.6-10.2-1.4-12.4-1.9-5.5-7.3-11-13.4-13.7-4.9-2.2-6.4-2.4-28.2-2.6-12.6-.1-23.7 0-24.5.4zm41.5 19.7c5.2 3.4 7 12.1 3.7 18.6-2.7 5.4-6.9 7-18.9 7H191V38.7l11.4.5c8.6.3 12 .8 14.1 2.2zm1.2 43.9c5 2.7 6.8 6.9 6.8 16.2 0 15.3-3.8 18.7-21.7 19.3l-11.8.4V82.8l11.8.4c8.6.3 12.6.8 14.9 2.1zm46.1-62.8c-1.5.9-3 2.6-3.4 3.9-.3 1.2-.4 21.4-.2 44.7.3 41 .4 42.6 2.6 47.9 3 7.6 7 12.1 13.9 15.7 13.5 7.1 31.1 7.1 44.6 0 6.9-3.6 10.9-8.1 14-15.7 2.1-5.3 2.2-6.8 2.5-47.9.2-23.4.1-43.5-.3-44.8-.8-3.4-5.9-5.6-11.7-5.1-9.2.9-8.7-1.9-9 46.7-.3 42.3-.3 42.6-2.6 46.2-2.9 4.8-7.9 7.1-15.3 7.1-7.6 0-12.6-2.5-15.3-7.8-2-3.7-2.1-5.7-2.4-46-.3-40.5-.4-42.3-2.3-44-2.6-2.4-11.5-2.9-15.1-.9zm97.2-.4c-1.3.6-2.8 1.5-3.2 2.2-.4.7-.8 25.8-.8 55.9v54.7l2.6 2c2.6 2 3.9 2.1 30.8 2.1 21.9 0 28.6-.3 30-1.3 2.7-2 3.4-10.8 1.2-14.2L420 121h-42V74.1c0-25.8-.3-47.7-.6-48.6-1.5-3.8-10.6-5.7-16.4-3.4zm79.4-.1c-5.5 2.2-5.4 1-5.4 59.2V135l3.3 2c3.8 2.4 8.5 2.5 13.2.6 1.9-.8 3.6-1.6 3.7-1.8.1-.2.5-16.7.8-36.7l.5-36.4 9.3 17.7c5.5 10.2 10.4 18.3 11.7 19.2 2.8 1.9 7.6 1.2 9.7-1.4.8-.9 5.5-8.9 10.4-17.7l8.9-16 .5 35c.3 19.2.8 35.5 1.3 36.2 2.3 3.6 14.1 4.1 17.8.7 1.8-1.6 1.9-3.7 1.9-55.6v-54l-2.9-2.9c-3.4-3.3-8.8-3.9-14.5-1.5-4.5 1.9-6.7 5-18.6 26.9-5.7 10.3-10.4 18.6-10.6 18.4-.2-.1-4.9-8.6-10.5-18.7-11.4-20.8-13.8-24.4-17.9-26.5-3.2-1.6-9.2-1.9-12.6-.5z"/></svg>`
-    })
 
 
     /* --- Social Icons --- */

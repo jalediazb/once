@@ -1,10 +1,10 @@
 {
   "title": "Once",
   "url": "/",
+  "domain": "heuristic-neumann-4af78b.netlify.app",
   "language": "es",
   "logoUrl": "/_images/once.png",
   "search": true,
-
   "showCookiesAdvice": true,
   "googleAnalyticsID": "",
   "footerLinks": [

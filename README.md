@@ -1,5 +1,7 @@
 # ONCE - Eleventy Theme
 
+[**Demo**](https://heuristic-neumann-4af78b.netlify.app/)
+
 Personal theme made with:
 - [Eleventy](https://www.11ty.dev/)
 - [BulmaCSS](https://bulma.io/)

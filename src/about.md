@@ -1,8 +1,7 @@
 ---
-layout: minimal-post.njk
+layout: post-minimal.njk
 title: About
 eleventyExcludeFromCollections: true
-featuredImage: ../_images/default.png
 ---
 
 # {{ title }}

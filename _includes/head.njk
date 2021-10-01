@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="{{ '/theme.css' | url }}">
     <link rel="icon" type="image/png" href="/_images/favicon.png" sizes="32x32">
 
+    {% if layout === 'post.njk' or layout === 'post-minimal.njk' %}
+      <meta property="og:site_name" content="{{config.title}}" />
+      <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary" />
+      <meta property="og:title" content="{{ title }}" />
+      <meta property="og:description" content="{{ description }}" />
+      {% if permalink %}
+        <meta property="og:url" content="https://{{config.domain}}{{ permalink }}" />
+        {% else %}
+        <meta property="og:url" content="https://{{config.domain}}{{ page.filePathStem }}/" />
+      {% endif %}
+
+      {% if featuredImage !== undefined %}
+        <meta property="og:image" content="https://{{config.domain}}{{featuredImage}}" />
+        {% else %}
+        <meta property="og:image" content="https://{{config.domain}}/_images/default.jpg" />
+      {% endif %}
+
+    {% endif %}
+
     {# {% set css %}
       {% include "custom.css" %}
     {% endset %}

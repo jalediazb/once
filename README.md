@@ -1,6 +1,6 @@
 # ONCE - Eleventy Theme
 
-[**Demo**](https://heuristic-neumann-4af78b.netlify.app/)
+[**Demo**](https://once-eleventy.netlify.app/)
 
 Personal theme made with:
 - [Eleventy](https://www.11ty.dev/)

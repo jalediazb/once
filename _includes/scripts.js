@@ -33,6 +33,7 @@ if (navigator.share) {
   })
 } else {
   shareMobileButton.style.display = "none";
+  document.getElementById('search-mobile').classList.add('ml-auto')
 }
 
 // Search

@@ -5,7 +5,9 @@
   "language": "es",
   "logoUrl": "/_images/once.png",
   "search": true,
-  "showCookiesAdvice": true,
+  "showCookiesAdvice": false,
+  "cookiesAdviceText": "Cookies advice text",
+  "cookiesAdviceMoreInfoAnchor": "More Info",
   "googleAnalyticsID": "",
   "footerLinks": [
     {

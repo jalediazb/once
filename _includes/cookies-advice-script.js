@@ -18,8 +18,8 @@ function rechazaCookies () {
     document.cookie = 'cookies_advice_' + dominio + '=rechaza; max-age=86400; path=/; SameSite=Lax';
 
     // Anuncios no personalizados
-    (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
-    (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0
+    // (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+    // (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0
 }
 
 function inyectar () {
@@ -37,8 +37,8 @@ function inyectar () {
         document.body.appendChild(inlineJsAnalytics);
 
         // Activar personalizacion de anuncios
-        (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 0
-        (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0
+        // (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 0
+        // (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0
     }
 }
 

@@ -8,6 +8,7 @@
   "showCookiesAdvice": false,
   "cookiesAdviceText": "Cookies advice text",
   "cookiesAdviceMoreInfoAnchor": "More Info",
+  "cookiesAdviceMoreInfoUrl": "/cookies/",
   "googleAnalyticsID": "",
   "footerLinks": [
     {

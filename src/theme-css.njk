@@ -2,5 +2,8 @@
 permalink: theme.css
 eleventyExcludeFromCollections: true
 ---
-{% include "./_css/bulma.css" %}
-{% include "./_css/custom.css" %}
+{% set css %}
+  {% include "./_css/bulma.css" %}
+  {% include "./_css/custom.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

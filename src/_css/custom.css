@@ -38,7 +38,23 @@ body {
     top: 0;
     width: 100%;
   }
+  .navbar-item img {
+    max-height: 2.5rem !important;
+  }
+  .logo {
+    padding: 0.25rem 0.75rem;
+  }
 }
+@media (min-width: 1024px) {
+  .navbar-item img {
+    max-height: 2.5rem !important;
+  }
+}
+.navigation-item {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 
 /* Tarjetas */
 .tarjeta:hover {

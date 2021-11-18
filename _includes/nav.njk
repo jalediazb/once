@@ -37,7 +37,7 @@
       <div class="navbar-end">
 
         {% for item in config.navbarMenu %}
-            <a class="navbar-item" href="{{item.url}}">{{item.anchor}}</a>
+            <a class="navbar-item navigation-item" href="{{item.url}}">{{item.anchor}}</a>
         {% endfor %}
 
         {% if config.navbarButtons.length > 0 %}

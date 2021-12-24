@@ -80,6 +80,13 @@ module.exports = function (eleventyConfig) {
         return resultado
     });
 
+    //Order Post by Date
+    eleventyConfig.addCollection("orderByDate", function(collectionApi) {
+        return collectionApi.getAll().sort(function(a, b) {
+          return b.date - a.date;
+        });
+    });
+
     // Artículos relacionados
     eleventyConfig.addFilter('relacionados', function(collection, etiquetas, path, limite) {
 
